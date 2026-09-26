@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crônica de Urgench — Mandato I</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --washi:#EFE6D3;
+    --washi-deep:#E2D4B4;
+    --sumi:#221D17;
+    --indigo:#233A55;
+    --shu:#A2381F;
+    --gold:#A9873F;
+    --line:rgba(34,29,23,.28);
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  *{box-sizing:inherit;}
+  body{
+    margin:0;
+    background:var(--washi);
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(169,135,63,.10), transparent 40%),
+      radial-gradient(circle at 85% 75%, rgba(35,58,85,.08), transparent 45%);
+    color:var(--sumi);
+    font-family:'EB Garamond', serif;
+    font-size:19px;
+    line-height:1.75;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:56px 26px 120px;}
+
+  /* seal */
+  .seal{
+    position:absolute; top:46px; right:30px;
+    width:66px; height:66px; border-radius:6px;
+    background:var(--shu); color:var(--washi);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Shippori Mincho', serif; font-weight:800; font-size:26px;
+    box-shadow:0 0 0 2px var(--washi), 0 0 0 3px var(--shu);
+    transform:rotate(-4deg);
+  }
+  header{position:relative; text-align:center; padding-bottom:34px; border-bottom:3px double var(--line);}
+  .kicker{
+    font-family:'Shippori Mincho', serif; letter-spacing:.14em; font-size:14px;
+    color:var(--indigo); margin-bottom:10px;
+  }
+  h1{
+    font-family:'Shippori Mincho', serif; font-weight:800;
+    font-size:clamp(34px,6vw,52px); margin:0 0 8px; color:var(--sumi);
+    letter-spacing:.02em;
+  }
+  .subtitle{font-style:italic; color:#4a4238; font-size:20px; margin:0;}
+  .meta{margin-top:22px; font-size:16px; color:#4a4238; display:grid; gap:6px;}
+  .meta b{color:var(--indigo); font-weight:600;}
+
+  .wave{height:26px; margin:44px 0 30px; opacity:.55;}
+
+  h2{
+    font-family:'Shippori Mincho', serif; font-weight:600; font-size:26px;
+    color:var(--indigo); margin:0 0 4px; padding-left:16px; border-left:4px solid var(--shu);
+  }
+  h2 .num{color:var(--gold); font-style:normal; margin-right:10px;}
+  section{margin-top:52px;}
+  section > p:first-of-type{margin-top:22px;}
+  p{margin:0 0 20px;}
+  strong{color:var(--indigo); font-weight:600;}
+
+  table{width:100%; border-collapse:collapse; margin:20px 0 8px; font-size:16px; background:rgba(255,255,255,.35);}
+  caption{caption-side:top; font-family:'Shippori Mincho',serif; text-align:left; padding-bottom:8px; color:var(--indigo); font-size:15px;}
+  th,td{border:1px solid var(--line); padding:9px 12px; text-align:left;}
+  th{background:rgba(35,58,85,.10); font-weight:600; color:var(--indigo); font-family:'Shippori Mincho',serif; font-size:14px;}
+  tr:nth-child(even) td{background:rgba(169,135,63,.06);}
+  .note{font-size:15px; font-style:italic; color:#5b5348; border-left:2px solid var(--gold); padding-left:14px; margin:14px 0 24px;}
+
+  ul{padding-left:22px; margin:14px 0;}
+  li{margin-bottom:8px;}
+
+  .hooks li::marker{color:var(--shu);}
+
+  footer{
+    margin-top:70px; padding-top:26px; border-top:3px double var(--line);
+    text-align:center; font-family:'Shippori Mincho', serif; font-size:15px; color:#6b6252;
+  }
+
+  .chapter-break{margin:90px 0 0;}
+  .wave.big{height:32px;}
+  .chapter-head{margin-top:6px; padding-top:26px;}
+  .seal-2{background:var(--indigo); box-shadow:0 0 0 2px var(--washi), 0 0 0 3px var(--indigo);}
+  .seal-3{background:var(--gold); color:var(--sumi); box-shadow:0 0 0 2px var(--washi), 0 0 0 3px var(--gold);}
+  .seal-4{background:#3E3A34; box-shadow:0 0 0 2px var(--washi), 0 0 0 3px #3E3A34;}
+  .seal-5{background:#2E5C55; box-shadow:0 0 0 2px var(--washi), 0 0 0 3px #2E5C55;}
+  .seal-6{background:#6B1E1E; box-shadow:0 0 0 2px var(--washi), 0 0 0 3px #6B1E1E;}
+  .seal-7{background:linear-gradient(135deg,var(--gold),#3E3A34); box-shadow:0 0 0 2px var(--washi), 0 0 0 3px var(--gold);}
+  .idx-table th,.idx-table td{padding:7px 9px; font-size:14px;}
+  .seal-8{background:#4A2545; box-shadow:0 0 0 2px var(--washi), 0 0 0 3px #4A2545;}
+  .seal-9{background:#1E5548; box-shadow:0 0 0 2px var(--washi), 0 0 0 3px #1E5548;}
+
+  @media (max-width:560px){
+    .seal{width:52px; height:52px; font-size:20px; top:26px; right:18px;}
+    .wrap{padding:44px 18px 90px;}
+    table{font-size:14px;}
+    th,td{padding:6px 8px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="seal">録</div>
+    <div class="kicker">ург蘭 — CRÔNICA DA CIDADE-ESTADO</div>
+    <h1>Urgench</h1>
+    <p class="subtitle">Mandato I — "A Hora das Cinzas"</p>
+    <div class="meta">
+      <div><b>Período:</b> outono de 1388 a verão de 1389</div>
+      <div><b>Monarca:</b> Sua Majestade Arthur I (Arthur Emperor)</div>
+      <div><b>Conselho de Estado:</b> Toiaum (Antonio) · Croesy · Hatyr · Arthur</div>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none"><path d="M0 15 Q 25 5 50 15 T 100 15 T 150 15 T 200 15 T 250 15 T 300 15 T 350 15 T 400 15 T 450 15 T 500 15 T 550 15 T 600 15" fill="none" stroke="#A2381F" stroke-width="2"/></svg>
+
+  <section>
+    <h2><span class="num">壱</span>Situação Geral</h2>
+    <p>Urgench renasce como um imenso canteiro de obras cercado de silêncio e cinzas. Entre os escombros que Tamerlão jurara nunca mais verem vida — poupando apenas, por ironia do destino, o velho minarete que ainda aponta para o céu como um dedo acusador — ergue-se agora um punhado de tendas, o brilho intermitente de uma lâmpada movida a gerador, e o som de ferramentas que aquele ermo nunca ouvira. Este é o mandato da sobrevivência e da fundação: firmar o mínimo de ordem, política e infraestrutura antes que o mundo exterior perceba — e reaja — ao que realmente floresce às margens do Amu Dária. Felizmente para os fundadores, Tamerlão tem os olhos voltados para o norte, onde a sombra de Tokhtamysh e da Horda Dourada cresce; é essa distração, mais que qualquer muralha, o verdadeiro escudo de Urgench neste primeiro ano.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">弐</span>Crônica do Mandato</h2>
+    <p><strong>A Chegada.</strong> Não houve luz cegante nem trovão: os quatro simplesmente estavam lá, entre pedras enegrecidas e ossos que ninguém enterrara, com seus baús, seus papéis enrolados em tubos impermeáveis e um gerador portátil que Croesy insistiu em ligar na primeira noite "só para provar que aquilo não era um sonho de fome." A luz elétrica sobre os escombros de Urgench atraiu, nas semanas seguintes, cerca de 2.800 sobreviventes dispersos — camponeses escondidos nos canais secos, artesãos que fugiram para os oásis vizinhos, alguns poucos clérigos que se recusaram a abandonar de vez a cidade sagrada. Vieram por fome, por curiosidade, por desespero. Toiaum, o mais cauteloso dos quatro, insistiu em recebê-los com comida antes de qualquer explicação; Hatyr insistiu em revistá-los antes de qualquer comida. Essa tensão — entre acolhimento e desconfiança — definiria o tom de todo o mandato.</p>
+    <p><strong>A Fundação do Poder.</strong> Nas primeiras semanas, os quatro compreenderam que não podiam governar por consenso informal indefinidamente. Toiaum defendeu uma presidência rotativa, temendo que qualquer coroa fixa corrompesse quem a usasse; Hatyr argumentou que uma cidade cercada de inimigos não sobrevive a debates, e precisa de um comando único e imediato; Croesy, pragmático, disse que "os mercadores não confiam em comitês, confiam em reis" — e um rei atrai crédito e alianças com mais facilidade que um conselho anônimo. Arthur, que já vinha desenhando os primeiros projetos de captação de água e organizando os turnos de trabalho quase sozinho, foi o nome que emergiu com menos resistência. A votação não foi unânime — Toiaum só cedeu depois que Arthur jurou, diante dos outros três, jamais decidir questões de guerra, moeda ou sucessão sem o aval do Conselho. Para a população, a explicação oficial evitou qualquer menção a viagens no tempo: os quatro se apresentaram como os "Sábios do Poente", guardiões de um saber antigo — ligado, pela propaganda de Toiaum, à memória de Al-Biruni e da velha tradição científica corásmia, para que o conhecimento novo parecesse herança recuperada, não feitiçaria importada.</p>
+    <p><strong>Reconstrução e Economia.</strong> Com o gerador reservado às obras críticas — bombeamento de água e a forja central —, o grosso do trabalho seguiu sendo braçal: escavação de poços, restauração de trechos dos antigos canais de irrigação corásmios, remoção de escombros para reaproveitamento de pedra e tijolo. As sementes adaptadas trazidas pelos viajantes foram plantadas nas primeiras faixas de terra irrigável recuperada, e os primeiros brotos, mais viçosos que qualquer coisa vista na região, se tornaram por si só uma peça de propaganda. Croesy instituiu um sistema provisório de vales de trabalho para evitar o colapso do escambo puro. Não demorou para que um dos primeiros capatazes locais fosse flagrado desviando rações para vendê-las a preço de guerra — o primeiro escândalo interno do regime, resolvido com exílio, não execução, para desgosto de Hatyr.</p>
+    <p><strong>Sociedade e Febre Tecnológica.</strong> A luz elétrica, os motores, os poucos aparelhos médicos trazidos pelos fundadores geraram algo entre fascínio e culto. Crianças seguiam Arthur pelas ruas de terra só para ver seu lampião portátil; alguns anciãos passaram a deixar oferendas discretas perto do gerador. O clero remanescente dividiu-se: uma facção via nos "Sábios do Poente" herdeiros legítimos do saber corásmio; outra sussurrava a palavra que ninguém queria dizer alto — <em>sihr</em>, feitiçaria. O Conselho tratou esse fervor como recurso e como risco ao mesmo tempo.</p>
+    <p><strong>Tecnologia e Ciência — os Limites do Possível.</strong> Nenhuma usina nuclear, nenhuma arma atômica, nenhum arranha-céu: os quatro sabiam que aqueles projetos, sem décadas de cadeia industrial, matéria-prima refinada e mão de obra especializada, eram apenas papel. O que se fez, de fato: um pequeno posto de saúde combinando medicina local com o punhado de suprimentos trazidos do futuro; os primeiros ensaios de destilação simples de água salobra em pequena escala; levantamentos geológicos preliminares nas colinas a leste. Sobre o eventual programa atômico, Arthur foi categórico perante o Conselho: tratava-se, na melhor das hipóteses, de um horizonte de gerações. Por ora, ficou registrado apenas como estudo teórico guardado a sete chaves.</p>
+    <p><strong>Defesa e Segurança.</strong> Hatyr organizou uma guarda de elite — cerca de setenta combatentes ao fim do mandato, equipados com um punhado de fuzis automáticos, duas metralhadoras pesadas, dois ou três veículos blindados leves, e um par de drones de reconhecimento usados com racionamento extremo de bateria. Essa força, ínfima para padrões de 2026, era absolutamente assombrosa para qualquer exército da região — suficiente para dispersar, numa escaramuça no início da primavera, um bando de saqueadores. O episódio rendeu a Urgench uma reputação de invulnerabilidade que os próprios fundadores sabiam ser exagerada.</p>
+    <p><strong>Diplomacia, Espionagem e Vida Cotidiana.</strong> Nenhuma embaixada formal foi aberta; a diplomacia do Mandato I foi feita de silêncio calculado e de subornos discretos a mercadores da Rota da Seda. Ainda assim, ao menos dois agentes — um a serviço de um governador timúrida, outro possivelmente ligado à Horda Dourada — foram identificados rondando os arredores; um foi capturado, o outro escapou. Entre os próprios fundadores, o desgaste também apareceu: Croesy adoeceu gravemente por três semanas, lembrando a todos, de forma brutal, que nenhum deles era imortal nem infalível.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">参</span>Decisões do Conselho</h2>
+    <p>O Conselho formalizou, ao longo do mandato: a instituição da Coroa eletiva com Arthur como primeiro monarca; a criação dos vales de trabalho geridos por Croesy; a ordem de priorização de obras (água, alimento, muralhas — antes de qualquer projeto vistoso); o sigilo absoluto sobre a verdadeira origem dos fundadores, sob pena de banimento; e a convocação da primeira Assembleia das Corporações, proposta por Toiaum como válvula de pressão social e fonte de legitimidade.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">肆</span>Parlamento Consultivo</h2>
+    <p>A Assembleia das Corporações reuniu-se pela primeira vez faltando poucas semanas para o fim do mandato — ferreiros, pedreiros, tecelões, agricultores, mercadores, e duas categorias novas, "engenheiros" e "médicos". A sessão discutiu quase exclusivamente queixas de ração e jornada de trabalho; o pedido de remuneração em algo mais tangível que promessas seláveis foi ouvido, mas não atendido, gerando o primeiro atrito real entre a Coroa e os ofícios.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">伍</span>Reações Externas</h2>
+    <p><strong>Tamerlão e a corte timúrida</strong> ainda não tratam Urgench como ameaça formal — apenas "sobreviventes teimosos reocupando ruínas". Mas os relatos de luzes noturnas e de uma escaramuça vencida com armas desconhecidas já subiram a régua da curiosidade do governador regional. <strong>Redes comerciais</strong> sussurram sobre os "Sábios do Poente" nas caravanserais, misturando fascínio e cautela supersticiosa. <strong>O clero</strong> permanece dividido entre veneração e suspeita de heresia. Nenhuma sanção, aliança ou guerra formal ocorreu neste mandato — apenas observação, cobiça e os primeiros fios de uma teia de espionagem.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">陸</span>Indicadores do Mandato I</h2>
+    <p class="note">Estimativas comparativas retroativas — categorias analíticas de 2026 aplicadas a uma economia pré-industrial em fundação, apenas como ferramenta narrativa, não como dado histórico real.</p>
+    <table>
+      <caption>Indicadores gerais — início vs. fim do mandato</caption>
+      <thead><tr><th>Indicador</th><th>Início</th><th>Fim do Mandato I</th><th>Variação</th></tr></thead>
+      <tbody>
+        <tr><td>Inflação anual</td><td>Sem moeda funcional</td><td>~14% a.a.</td><td>Instabilidade controlada</td></tr>
+        <tr><td>Saneamento básico</td><td>0%</td><td>24%</td><td>+24 p.p.</td></tr>
+        <tr><td>Tratamento de esgoto</td><td>0%</td><td>6%</td><td>+6 p.p.</td></tr>
+        <tr><td>PIB nominal (equiv. 2026)</td><td>~US$ 0</td><td>~US$ 5,2 milhões</td><td>Implantação inicial</td></tr>
+        <tr><td>Ranking economias mundiais</td><td>Inexistente</td><td>Fora de ranking</td><td>Vila comercial regional</td></tr>
+        <tr><td>Ranking maiores exércitos</td><td>Inexistente</td><td>Fora de ranking (~70 combatentes)</td><td>Superioridade qualitativa</td></tr>
+        <tr><td>IDH estimado</td><td>~0,08</td><td>~0,19</td><td>+0,11</td></tr>
+        <tr><td>PIB per capita</td><td>~US$ 0</td><td>~US$ 380</td><td>População ~13.700 hab.</td></tr>
+        <tr><td>Índice de Gini</td><td>N/A</td><td>0,61</td><td>Alta desigualdade fundacional</td></tr>
+        <tr><td>Homicídios (por 100 mil/ano)</td><td>Não mensurável</td><td>46</td><td>Queda após guarda formada</td></tr>
+        <tr><td>Crescimento do Agro</td><td>0%</td><td>31% da área irrigável histórica</td><td>Produtividade +65% vs. região</td></tr>
+        <tr><td>Construções civis</td><td>0</td><td>~1.100 moradias + 40 edifícios públicos</td><td>Crescimento fundacional</td></tr>
+        <tr><td>Indústria</td><td>0</td><td>3 oficinas + 1 forjaria central</td><td>Fase artesanal/semimecanizada</td></tr>
+        <tr><td>Setor de serviços</td><td>0</td><td>Comércio, ensino e saúde nascentes</td><td>Base muito baixa</td></tr>
+        <tr><td>Extração de minérios</td><td>0</td><td>Prospecção + extração de sal</td><td>Fase inicial</td></tr>
+        <tr><td>Dívida externa / PIB</td><td>N/A</td><td>0%</td><td>Sem crédito internacional</td></tr>
+        <tr><td>Dívida interna / PIB</td><td>N/A</td><td>~4%</td><td>Compromissos com guildas</td></tr>
+        <tr><td>Desemprego</td><td>~100%</td><td>~52%</td><td>Queda por obras</td></tr>
+        <tr><td>Alfabetização</td><td>~11%</td><td>~13%</td><td>Primeira escola aberta</td></tr>
+        <tr><td>Formação ensino básico</td><td>0%</td><td>~9%</td><td>Escola Fundacional</td></tr>
+        <tr><td>Formação ensino médio</td><td>0%</td><td>~2%</td><td>Aprendizes de oficina</td></tr>
+        <tr><td>Formação ensino superior</td><td>0%</td><td>~0,1% (14 pessoas)</td><td>Proto-academia</td></tr>
+      </tbody>
+    </table>
+    <p>A leitura conjunta desses números conta uma história de fundação, não de consolidação: os saltos absolutos são grandes porque partem do zero, não porque Urgench já seja próspera — o Gini altíssimo e o desemprego acima de 50% deixam claro que a cidade continua uma economia de sobrevivência sustentada por quatro pessoas e um punhado de máquinas.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">漆</span>Riscos, Tensões e Oportunidades</h2>
+    <p>Os riscos mais imediatos: (1) a distração de Tamerlão com Tokhtamysh pode se dissipar antes que Urgench tenha muralhas e exército reais; (2) a concentração de poder em quatro mortais — já abalada pela doença de Croesy — pode colapsar sem sucessão clara; (3) a tensão religiosa em torno da "feitiçaria" pode escalar; (4) a desigualdade encoberta pelo crescimento absoluto pode gerar ressentimento, sobretudo após a recusa de remunerar a Assembleia. Como oportunidade, Urgench já ocupa um ponto estratégico da Rota da Seda e atrai, pelo boato, os artesãos e curiosos mais talentosos da região.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">捌</span>Ganchos para o Mandato II</h2>
+    <ul class="hooks">
+      <li>Como reagirá o governador timúrida ao espião capturado — e o que ele já reportou a Samarcanda?</li>
+      <li>A recusa em remunerar a Assembleia das Corporações: greve, sabotagem ou negociação?</li>
+      <li>O culto informal em torno da tecnologia dos fundadores cresce ou é contido pelo clero favorável?</li>
+      <li>Croesy, já recuperado, volta a defender abertura comercial mais agressiva — Hatyr concorda?</li>
+      <li>Um sucessor para a Coroa ainda não foi definido: o Conselho vai enfrentar essa lacuna agora ou adiar de novo?</li>
+    </ul>
+  </section>
+
+  <div class="chapter-break">
+    <svg class="wave big" viewBox="0 0 600 30" preserveAspectRatio="none"><path d="M0 22 Q 25 8 50 22 T 100 22 T 150 22 T 200 22 T 250 22 T 300 22 T 350 22 T 400 22 T 450 22 T 500 22 T 550 22 T 600 22" fill="none" stroke="#233A55" stroke-width="2.4"/></svg>
+  </div>
+
+  <header class="chapter-head">
+    <div class="seal seal-2">弐</div>
+    <div class="kicker">ург蘭 — CRÔNICA DA CIDADE-ESTADO</div>
+    <h1>Mandato II</h1>
+    <p class="subtitle">"Fé, Ferro e o Peso dos Anos" — 1390–1400</p>
+    <div class="meta">
+      <div><b>Monarca:</b> Sua Majestade Arthur I, de 20 a 30 anos</div>
+      <div><b>Conselho:</b> Toiaum (19→29) · Croesy (22→32) · Hatyr (19→29) · Arthur (20→30)</div>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none"><path d="M0 15 Q 25 5 50 15 T 100 15 T 150 15 T 200 15 T 250 15 T 300 15 T 350 15 T 400 15 T 450 15 T 500 15 T 550 15 T 600 15" fill="none" stroke="#A2381F" stroke-width="2"/></svg>
+
+  <section>
+    <h2><span class="num">壱</span>Situação Geral</h2>
+    <p>A década que transforma quatro jovens sobreviventes em governantes de meia-idade prematura. Urgench deixa de ser um acampamento fortificado para se tornar algo que já merece o nome de cidade — com sinos de igreja, oficinas fumegantes, trilhos de tração animal e uma geração inteira de crianças que nunca conheceu outra realidade além da dos "Sábios do Poente". É também a década em que a fé dos quatro fundadores deixa de ser segredo de gabinete e passa a ser projeto de Estado, com todas as fraturas que isso implica.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">弐</span>Crônica do Mandato</h2>
+    <p><strong>O amadurecimento e o peso dos anos.</strong> Aos vinte e poucos anos, os quatro ainda governavam com a energia impetuosa da fundação; aos trinta, governam com as cicatrizes de quem já enterrou aliados, sepultou ilusões e assinou decretos que custaram vidas. Hatyr casou-se em 1393 com a filha de um antigo capitão de caravana — união que trouxe lealdade das rotas comerciais do sul, mas também o primeiro herdeiro nascido em Urgench sob o nome de um dos fundadores, reabrindo a pergunta nunca resolvida sobre sucessão dinástica versus eletiva. Croesy, absorvido pelo Tesouro, recusou casamento formal por anos, preferindo alianças comerciais a alianças de sangue — postura que Toiaum, cada vez mais devoto, passou a criticar como "mundanismo sem raiz". Arthur casou-se em 1396 com uma nobre local persa-corásmia convertida ao catolicismo, gesto calculado para costurar a Coroa à aristocracia sobrevivente. Toiaum atravessou uma crise de fé em 1394, após meses de febre que quase o mataram, da qual saiu ainda mais fervoroso — e mais implacável nas decisões religiosas.</p>
+    <p><strong>A questão religiosa: Roma, Bizâncio e o peso da terra.</strong> Croesy argumentou que o rito bizantino teria mais chance de absorver os remanescentes nestorianos da região e abrir porta diplomática com um Império Bizantino desesperado por aliados. Hatyr insistia que só a submissão plena a Roma garantiria proteção real — cruzados, financiamento papal, legitimidade ocidental. Arthur optou por um caminho híbrido: submissão canônica a Roma, mas com liturgia adaptada, seguindo o modelo já ensaiado por missões franciscanas em cidades como Almaliq. A decisão agradou parcialmente a todos e satisfez plenamente a ninguém — prova, segundo Toiaum, de que fora a decisão certa. A missão evangelizadora começou pelas margens: hospitais, poços públicos e escolas paroquiais gratuitas para famílias que aceitassem batismo. Mas a resistência foi real: os notáveis muçulmanos remanescentes viram no avanço católico uma segunda destruição, mais lenta e insidiosa. Houve um levante localizado em 1397, num bairro de artesãos que se recusou a entregar seus filhos às escolas paroquiais — reprimido por Hatyr com prisões, não execuções, por insistência de Toiaum, que temia converter mártires em símbolos.</p>
+    <p><strong>Academias, minifúndios e o povo-soldado.</strong> A partir de 1391, ergueram-se as primeiras Academias de Fortalecimento — misturando ginástica, disciplina militar, alfabetização religiosa e treinamento agrícola, vinculadas a minifúndios distribuídos entre famílias leais. A medida enfureceu grandes proprietários de terra remanescentes: dois conspiraram, em 1395, para sabotar um canal recém-construído; o plano foi descoberto por Hatyr, e as terras confiscadas foram redistribuídas — precedente que consolidou os minifúndios como política de Estado e arma política do Conselho. Ao fim da década, uma geração inteira passava pelas Academias antes de assumir ofícios ou a milícia — a espinha dorsal do que Hatyr já chamava de "povo-soldado".</p>
+    <p><strong>Nacionalismo em construção.</strong> Um brasão (a torre do minarete sobrevivente sobre um campo de trigo dourado), uma bandeira, um hino composto por um clérigo franciscano estabelecido em 1392, e um feriado anual, o "Dia das Cinzas". A história oficial, ensinada nas Academias e paróquias, funde catástrofe, salvação e fé: Urgench foi destruída para renascer purificada, os fundadores enviados por desígnio divino — narrativa que nenhum dos quatro desmente, ainda que Croesy a chame, em privado, de "a mentira mais útil que já contamos".</p>
+    <p><strong>Ferro, estrada e o início dos trilhos.</strong> Sem carvão de qualidade nem siderurgia própria, o caminho foi gradual: estradas empedradas ligando minas de sal e poços de ferro aos ateliês; pontes sobre canais restaurados; e, a partir de 1398, os primeiros trilhos de tração animal — vagonetes puxados por bois sobre trilhos de madeira revestida de ferro. É pouco para 2026, mas revolucionário para 1400: nenhum reino vizinho possui nada parecido.</p>
+    <p><strong>A doutrina da não anexação, posta à prova.</strong> Em 1396, um governador timúrida menor tentou impor tributo sobre caravanas de território que Urgench já considerava seu. A resposta foi rápida: uma coluna blindada leve, apoiada por drones, dispersou a guarnição em dois dias. Hatyr defendeu a ocupação permanente da fortaleza conquistada; Arthur recusou — a fortaleza foi destruída, não ocupada. A decisão gerou o mais sério racha público entre os dois, com Hatyr sugerindo que "um reino que não conquista quando pode, um dia será conquistado por quem não hesitou". Arthur venceu por três a um, mas a ferida nunca cicatrizou de todo.</p>
+    <p><strong>Vida cotidiana e febre tecnológica madura.</strong> Ao fim da década, crianças nascidas depois de 1390 crescem vendo trilhos, sinos de igreja e lâmpadas elétricas como parte natural do mundo. A febre inicial deu lugar a uma religiosidade cívica mais estável — mas também a uma nova classe de descontentes: artesãos deslocados, clérigos muçulmanos sem lugar na nova ordem, e uma aristocracia menor sem terra. Urgench em 1400 é próspera, mas não pacífica por dentro.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">参</span>Decisões do Conselho</h2>
+    <p>O Conselho formalizou: a submissão canônica a Roma com liturgia de adaptação oriental; a rede de Academias vinculada aos minifúndios; a cunhagem do <em>dracma de Urgench</em>, encerrando a era dos vales de trabalho; o brasão, a bandeira e o calendário cívico-religioso; a doutrina de não anexação, reafirmada após a crise de 1396; e um corpo diplomático mínimo para contato discreto com redes franciscanas e comerciantes genoveses.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">肆</span>Parlamento Consultivo</h2>
+    <p>A Assembleia das Corporações tornou-se palco de tensão entre ofícios tradicionais e as novas categorias mecanizadas. Em 1398, os ferreiros protestaram contra a concorrência da forjaria central subsidiada pela Coroa; o Conselho respondeu com cotas de fornecimento que aliviaram, mas não resolveram, o ressentimento.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">伍</span>Reações Externas</h2>
+    <p><strong>Tamerlão</strong> passou boa parte da década distante de Khwarezm: sua Campanha de Cinco Anos (1392–1396) devastou a Pérsia, a Mesopotâmia e o Cáucaso, e a guerra contra <strong>Tokhtamysh e a Horda Dourada</strong>, culminando na destruição de Sarai em 1395, redirecionou parte do comércio da Rota da Seda para rotas mais ao sul — engordando os cofres de Urgench sem atrair olhares. Em 1398, Tamerlão voltou-se para a Índia, saqueando Delhi. Só ao fim de 1400 chegam a Urgench, por mercadores nervosos, os primeiros sinais de que ele volta os olhos para o oeste. Bayezid I, vitorioso em Nicópolis (1396), tornou-se figura temida na cristandade; <strong>Bizâncio</strong>, encurralada, intensificou contatos com Roma — e é por essa rede que os primeiros rumores sobre "uma cidade cristã renascida na Corásmia" chegam a Caffa ao fim de 1400.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">陸</span>Indicadores do Mandato II <span style="font-size:15px;font-weight:400;color:#6b6252;">(consolidados, 1390–1400)</span></h2>
+    <p class="note">Estimativas comparativas retroativas — categorias de 2026 aplicadas a uma economia pré-moderna em expansão acelerada, apenas como ferramenta analítica.</p>
+    <table>
+      <caption>Indicadores gerais — início (1390) vs. fim (1400)</caption>
+      <thead><tr><th>Indicador</th><th>1390</th><th>1400</th><th>Variação</th></tr></thead>
+      <tbody>
+        <tr><td>Inflação anual</td><td>~14%</td><td>~7%</td><td>Estabilização após o dracma</td></tr>
+        <tr><td>Saneamento básico</td><td>24%</td><td>68%</td><td>+44 p.p.</td></tr>
+        <tr><td>Tratamento de esgoto</td><td>6%</td><td>40%</td><td>+34 p.p.</td></tr>
+        <tr><td>PIB nominal (equiv. 2026)</td><td>~US$ 5,2 milhões</td><td>~US$ 210 milhões</td><td>Crescimento acelerado</td></tr>
+        <tr><td>Ranking economias mundiais</td><td>Fora de ranking</td><td>Comparável a pequena república-cidade</td><td>Ainda irrelevante globalmente</td></tr>
+        <tr><td>Ranking maiores exércitos</td><td>Fora de ranking (~70)</td><td>Fora de ranking (~2.400)</td><td>Salto qualitativo e quantitativo</td></tr>
+        <tr><td>IDH estimado</td><td>0,19</td><td>0,41</td><td>+0,22</td></tr>
+        <tr><td>PIB per capita</td><td>~US$ 380</td><td>~US$ 3.900</td><td>Salto expressivo</td></tr>
+        <tr><td>Índice de Gini</td><td>0,61</td><td>0,52</td><td>Redução (efeito minifúndios)</td></tr>
+        <tr><td>Homicídios (por 100 mil/ano)</td><td>46</td><td>18</td><td>Queda acentuada</td></tr>
+        <tr><td>Crescimento do Agro</td><td>31% da área irrigável</td><td>78% da área irrigável</td><td>Reforma dos minifúndios</td></tr>
+        <tr><td>Construções civis</td><td>~1.100 moradias</td><td>~9.200 moradias + catedral e academias</td><td>Expansão urbana</td></tr>
+        <tr><td>Indústria</td><td>3 oficinas + 1 forjaria</td><td>Complexo proto-industrial</td><td>Industrialização inicial</td></tr>
+        <tr><td>Setor de serviços</td><td>Nascente</td><td>Escolas, hospitais, clero organizado</td><td>Crescimento estrutural</td></tr>
+        <tr><td>Extração de minérios</td><td>Sal</td><td>Sal, ferro e prospecção de carvão</td><td>Base para siderurgia</td></tr>
+        <tr><td>Dívida externa / PIB</td><td>0%</td><td>~1%</td><td>Créditos genoveses informais</td></tr>
+        <tr><td>Dívida interna / PIB</td><td>~4%</td><td>~11%</td><td>Financiamento de obras</td></tr>
+        <tr><td>Desemprego</td><td>~52%</td><td>~9%</td><td>Absorção pela indústria</td></tr>
+        <tr><td>Alfabetização</td><td>~13%</td><td>~46%</td><td>Escolas paroquiais e Academias</td></tr>
+        <tr><td>Formação ensino básico</td><td>~9%</td><td>~61%</td><td>Expansão educacional</td></tr>
+        <tr><td>Formação ensino médio</td><td>~2%</td><td>~22%</td><td>Academias e aprendizado técnico</td></tr>
+        <tr><td>Formação ensino superior</td><td>~0,1%</td><td>~3%</td><td>Pequeno seminário-escola</td></tr>
+      </tbody>
+    </table>
+    <p>A curva de crescimento é real, mas desigual: o Gini ainda alto e a dívida interna crescente mostram que a prosperidade de 1400 é financiada por reformas agrárias contestadas e obras públicas ainda não pagas — e a paz religiosa é mais aparente do que sólida.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">漆</span>Riscos, Tensões e Oportunidades</h2>
+    <p>Riscos centrais: (1) o fim das campanhas orientais de Tamerlão pode liberar sua atenção para o oeste, aproximando-o de Khwarezm; (2) a ferida entre Hatyr e Arthur sobre não anexação pode se agravar na próxima crise; (3) o ressentimento de clérigos deslocados e artesãos ameaçados pode alimentar revolta mais organizada; (4) os boatos em Caffa podem atrair atenção papal, genovesa ou timúrida antes da hora. Como oportunidade, a desorganização da Horda Dourada e o apetite bizantino por aliados abrem uma janela diplomática rara: Urgench pode deixar de ser apenas observada e passar a ser cortejada.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">捌</span>Ganchos para o Mandato III</h2>
+    <ul class="hooks">
+      <li>Tamerlão volta os olhos para o oeste: o que Urgench faz quando a distração providencial finalmente acabar?</li>
+      <li>O primeiro contato vindo de Roma ou Bizâncio, atraído pelos rumores de Caffa: embaixada, missão ou espionagem?</li>
+      <li>A sucessão: com um herdeiro de Hatyr já nascido, o Conselho enfrentará a questão dinástica que sempre adiou?</li>
+      <li>O ressentimento acumulado explode em revolta coordenada?</li>
+      <li>Hatyr, ainda ressentido pela derrota de 1396, aceita a doutrina de não anexação ou age por conta própria?</li>
+    </ul>
+  </section>
+
+  <div class="chapter-break">
+    <svg class="wave big" viewBox="0 0 600 30" preserveAspectRatio="none"><path d="M0 22 Q 25 8 50 22 T 100 22 T 150 22 T 200 22 T 250 22 T 300 22 T 350 22 T 400 22 T 450 22 T 500 22 T 550 22 T 600 22" fill="none" stroke="#A9873F" stroke-width="2.4"/></svg>
+  </div>
+
+  <header class="chapter-head">
+    <div class="seal seal-3">参</div>
+    <div class="kicker">ург蘭 — CRÔNICA DA CIDADE-ESTADO</div>
+    <h1>Mandato III</h1>
+    <p class="subtitle">"A Sombra que Passou" — 1400–1415</p>
+    <div class="meta">
+      <div><b>Monarca:</b> Sua Majestade Arthur I, de 30 a 45 anos — sem troca de titular</div>
+      <div><b>Conselho:</b> Toiaum (29→44) · Croesy (32→47) · Hatyr (29→44) · Arthur (30→45)</div>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none"><path d="M0 15 Q 25 5 50 15 T 100 15 T 150 15 T 200 15 T 250 15 T 300 15 T 350 15 T 400 15 T 450 15 T 500 15 T 550 15 T 600 15" fill="none" stroke="#A2381F" stroke-width="2"/></svg>
+
+  <section>
+    <h2><span class="num">壱</span>Situação Geral</h2>
+    <p>Os quatro fundadores atravessam a meia-idade sob a sombra mais comprida que já pairou sobre Urgench — a de Tamerlão em pessoa, marchando rumo ao leste com o maior exército que a Ásia Central já viu, passando perigosamente perto das fronteiras da cidade-Estado antes de desaparecer da história sem nunca ter chegado. É também o mandato em que o Conselho, pela primeira vez, olha para a própria mortalidade de frente e tenta desenhar, no papel, uma Urgench capaz de sobreviver a eles.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">弐</span>Crônica do Mandato</h2>
+    <p><strong>A sombra que passou: o fantasma de 1405.</strong> Em 1402, a vitória de Tamerlão sobre Bayezid I em Ancara confirmou aos quatro que a história ainda seguia, em linhas gerais, o rumo que conheciam. No fim de 1404, Tamerlão reuniu suas hostes para conquistar a China Ming, com rota passando por Otrar, a poucas centenas de quilômetros de Khwarezm. Espiões urguenchianos reportaram colunas de cavalaria em número inimaginável avançando na direção geral da cidade. Croesy, consultando os registros preservados desde 2026, insistia que a data e o local da morte de Tamerlão — Otrar, fevereiro de 1405 — já estavam escritos; Hatyr respondia que a própria presença deles já mudara a história, e apostar tudo numa data de livro seria suicídio. O Conselho optou por um meio-termo tenso: reforço silencioso das muralhas, tropas em alerta máximo, sem gesto que soasse provocação. Em fevereiro de 1405, exatamente como os arquivos previam, chegou a notícia: Tamerlão morrera em Otrar, sua campanha chinesa abortada. A cidade explodiu em celebração, e a Igreja batizou o episódio de milagre — o "Dia da Sombra que Passou". Em privado, os quatro sabiam a verdade desconfortável: apostaram certo, mas a aposta poderia ter sido catastrófica.</p>
+    <p><strong>A reunião sobre sucessão.</strong> O susto de 1405 precipitou o que o Conselho vinha adiando desde a fundação. Toiaum apelou pela formação religiosa do herdeiro nas Academias; Croesy defendeu salvaguarda institucional própria para a continuidade técnica e administrativa; Hatyr exigiu um corpo militar formal com poder de veto, insinuando que uma dinastia mais assertiva — a dele — serviria melhor à cidade. Arthur propôs a arquitetura final, aprovada por três votos a um: a Coroa permanece eletiva entre os fundadores; institui-se o <strong>Juramento Dinástico</strong>, exigindo que todo futuro monarca seja criado nas Academias e confirmado na fé; criam-se o <strong>Conselho Técnico-Científico</strong> (presidido por Croesy) e o <strong>Conselho Espiritual-Clerical</strong> (presidido por Toiaum), ambos com veto sobre decisões que abandonem a missão fundacional; institui-se o <strong>Colégio dos Fundadores</strong>, puramente honorífico; e, para emergências, o parlamento pode eleger um regente temporário, sujeito a veto retroativo dos dois Conselhos. Hatyr recebeu, como concessão, a chefia de uma subcomissão de Defesa — não o corpo autônomo que pedia —, e a derrota, reeditando 1396, aprofundou seu distanciamento silencioso de Arthur. O sistema, todos sabiam, era um andaime teórico jamais testado por uma sucessão real.</p>
+    <p><strong>Amplificação tecnológica.</strong> A <strong>siderurgia</strong> foi a vitória inequívoca: o primeiro alto-forno entrou em operação em 1408, e por volta de 1410 Urgench já produzia aço próprio, o suficiente para expandir trilhos, ferramentas e peças de armas simples. As <strong>telecomunicações</strong> avançaram com um telégrafo elétrico rudimentar até um posto fronteiriço em 1409 — vulnerável, como se provou no mesmo ano, quando um raide cortou a linha. Os <strong>automóveis</strong> continuaram relíquias: os dois veículos originais, já com vinte anos, foram parcialmente canibalizados, enquanto artesãos montaram "auto-carroças" híbridas para reconhecimento e transporte da Coroa. Não houve <strong>aeromóveis</strong> reais: os drones remanescentes, com baterias degradadas, ficaram restritos a uso cerimonial. <strong>Computação</strong> permaneceu relíquia sagrada: os tablets de 1388, recarregados por painéis solares racionados, seguiam guardados para decisões críticas, sem indústria eletrônica local capaz de reproduzi-los. A <strong>petroquímica</strong> deu seu primeiro passo tímido, com uma estação experimental de refino produzindo querosene artesanal. As <strong>camisinhas</strong> tornaram-se o item mais controverso: Hatyr pressionou por produção sanitária militar; Toiaum resistiu por doutrina; o compromisso restringiu a fabricação, com látex importado e finito, à distribuição exclusiva pelo corpo médico militar — um mercado paralelo entre soldados surgiu quase de imediato. Os <strong>chuveiros elétricos</strong> chegaram às Academias e residências clericais; um incêndio elétrico em 1407 matou dois aprendizes e forçou reforma do isolamento, e a segregação de turnos por sexo aplacou protestos conservadores sem resolver o ressentimento de quem via neles um privilégio. A <strong>produção em massa</strong> avançou de forma modesta, com padronização de uniformes e componentes nas oficinas centrais.</p>
+    <p><strong>Vida, fé e as próximas gerações.</strong> O herdeiro de Arthur, batizado Arthur II, tornou-se o primeiro caso de teste do Juramento Dinástico, disputado por clero, técnicos e militares. O filho de Hatyr, já adolescente talentoso nas armas, tornou-se símbolo do "velho grupo" que via nas restrições do novo sistema uma diluição do mérito militar. Croesy, aos 47, aceitou um casamento tardio em 1409, por razões mais políticas que afetivas. O velho frei franciscano que compusera o hino nacional morreu em 1411, sucedido pelo primeiro padre nascido em Urgench — marco silencioso do projeto eclesiástico de Toiaum finalmente dando frutos próprios.</p>
+    <p><strong>O mundo além das muralhas.</strong> Com a morte de Tamerlão, o império timúrida fragmentou-se; por volta de 1409, Shah Rukh consolidou o poder a partir de Herat, mais interessado em comércio e estabilidade que em conquista — uma bênção silenciosa para Urgench. Na Horda Dourada, Tokhtamysh foi morto por volta de 1406, e o poder passou ao kingmaker Edigu. Entre os otomanos, a morte de Bayezid abriu o Interregno, guerra civil entre seus filhos encerrada em 1413 com a vitória de Mehmed I. Foi por via genovesa, através de Caffa, que chegou a Urgench, por volta de 1408, sua primeira missão estrangeira real: uma delegação franciscana buscando confirmar os rumores de "uma cidade cristã renascida na Corásmia". O encontro expôs o Cisma do Ocidente — dois, depois três pretendentes ao papado. Toiaum insistiu em lealdade a Roma; Croesy alertou sobre apostar no papado errado; Arthur optou por uma fórmula deliberadamente vaga — lealdade "ao legítimo Pontífice Romano", sem especificar qual —, que satisfez os franciscanos genoveses sem fechar portas. A missão partiu prometendo relatar a Roma "uma comunidade fiel nos confins do Oriente", com promessa distante de uma futura diocese.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">参</span>Decisões do Conselho</h2>
+    <p>Além da arquitetura sucessória, o Conselho formalizou: a criação do Conselho Técnico-Científico e do Conselho Espiritual-Clerical; o Juramento Dinástico como lei fundamental; a autorização sob sigilo da produção médico-militar de profiláticos; a construção do alto-forno e da linha de telégrafo; e a fórmula diplomática de lealdade papal "vaga por necessidade".</p>
+  </section>
+
+  <section>
+    <h2><span class="num">肆</span>Parlamento Consultivo</h2>
+    <p>A Assembleia recebeu com alívio parcial a cláusula de regência de emergência, mas cobrou, sem sucesso, assento permanente nos novos Conselhos. Engenheiros e médicos consolidaram-se como corporações plenas, refletindo seu peso crescente na vida da cidade.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">伍</span>Reações Externas</h2>
+    <p>A morte de Tamerlão (1405), a fragmentação timúrida sob Shah Rukh, o assassinato de Tokhtamysh e a ascensão de Edigu, o Interregno Otomano (1402–1413) resolvido por Mehmed I, e o primeiro contato franciscano-genovês (1408) complicado pelo Cisma do Ocidente foram os eventos externos que mais moldaram o mandato — nenhuma guerra direta envolveu Urgench além do incidente do telégrafo em 1409.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">陸</span>Indicadores do Mandato III <span style="font-size:15px;font-weight:400;color:#6b6252;">(consolidados, 1400–1415)</span></h2>
+    <p class="note">Estimativas comparativas retroativas — categorias de 2026 aplicadas a uma economia pré-moderna em maturação, apenas como ferramenta analítica.</p>
+    <table>
+      <caption>Indicadores gerais — 1400 vs. 1415</caption>
+      <thead><tr><th>Indicador</th><th>1400</th><th>1415</th><th>Variação</th></tr></thead>
+      <tbody>
+        <tr><td>Inflação anual</td><td>~7%</td><td>~5%</td><td>Estabilização adicional</td></tr>
+        <tr><td>Saneamento básico</td><td>68%</td><td>85%</td><td>+17 p.p.</td></tr>
+        <tr><td>Tratamento de esgoto</td><td>40%</td><td>62%</td><td>+22 p.p.</td></tr>
+        <tr><td>PIB nominal (equiv. 2026)</td><td>~US$ 210 milhões</td><td>~US$ 780 milhões</td><td>Crescimento em desaceleração relativa</td></tr>
+        <tr><td>Ranking economias mundiais</td><td>Fora de ranking</td><td>Comparável a república italiana média</td><td>Ainda irrelevante globalmente</td></tr>
+        <tr><td>Ranking maiores exércitos</td><td>Fora de ranking (~2.400)</td><td>Fora de ranking (~5.500, aço próprio)</td><td>Reforço qualitativo real</td></tr>
+        <tr><td>IDH estimado</td><td>0,41</td><td>0,53</td><td>+0,12</td></tr>
+        <tr><td>PIB per capita</td><td>~US$ 3.900</td><td>~US$ 8.480</td><td>População ~92 mil hab.</td></tr>
+        <tr><td>Índice de Gini</td><td>0,52</td><td>0,47</td><td>Redução moderada</td></tr>
+        <tr><td>Homicídios (por 100 mil/ano)</td><td>18</td><td>9</td><td>Queda continuada</td></tr>
+        <tr><td>Crescimento do Agro</td><td>78% da área irrigável</td><td>94% da área irrigável</td><td>Aproximação da saturação</td></tr>
+        <tr><td>Construções civis</td><td>~9.200 moradias</td><td>~21.000 moradias + seminário e academias</td><td>Expansão sustentada</td></tr>
+        <tr><td>Indústria</td><td>Complexo proto-industrial</td><td>Alto-forno e aço próprio</td><td>Salto qualitativo</td></tr>
+        <tr><td>Setor de serviços</td><td>Escolas, hospitais, clero</td><td>Telégrafo, classe mercantil ampliada</td><td>Crescimento estrutural</td></tr>
+        <tr><td>Extração de minérios</td><td>Sal, ferro, prospecção de carvão</td><td>Ferro em escala, carvão inicial</td><td>Base siderúrgica consolidada</td></tr>
+        <tr><td>Dívida externa / PIB</td><td>~1%</td><td>~3%</td><td>Novas linhas genovesas</td></tr>
+        <tr><td>Dívida interna / PIB</td><td>~11%</td><td>~16%</td><td>Financiamento das novas instituições</td></tr>
+        <tr><td>Desemprego</td><td>~9%</td><td>~5%</td><td>Quase pleno emprego</td></tr>
+        <tr><td>Alfabetização</td><td>~46%</td><td>~64%</td><td>Expansão continuada</td></tr>
+        <tr><td>Formação ensino básico</td><td>~61%</td><td>~79%</td><td>Cobertura quase universal</td></tr>
+        <tr><td>Formação ensino médio</td><td>~22%</td><td>~37%</td><td>Crescimento técnico sustentado</td></tr>
+        <tr><td>Formação ensino superior</td><td>~3%</td><td>~7%</td><td>Seminário-escola vira Real Academia</td></tr>
+      </tbody>
+    </table>
+    <p>O crescimento já não é o salto vertiginoso da fundação, mas uma curva mais madura — sinal de que Urgench deixou de ser um experimento frágil para se tornar, ainda que modestamente, uma economia em consolidação real.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">漆</span>Riscos, Tensões e Oportunidades</h2>
+    <p>Riscos centrais: (1) o sistema sucessório de 1405 nunca foi testado por uma morte real entre os fundadores; (2) o distanciamento de Hatyr, agravado por duas derrotas consecutivas, é fratura latente no topo do poder; (3) a fórmula diplomática "vaga" sobre o papado pode se tornar insustentável quando o Cisma caminhar para resolução; (4) a dependência de tecnologia irreplicável (tablets, drones) continua sendo ponto único de falha. Como oportunidade, a morte de Tamerlão e a ascensão de um Shah Rukh mais pacífico abrem, pela primeira vez, uma janela real de estabilidade regional prolongada.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">捌</span>Ganchos para o Mandato IV</h2>
+    <ul class="hooks">
+      <li>O Concílio de Constança (convocado em novembro de 1414) vai validar ou invalidar a aposta diplomática de Arthur?</li>
+      <li>O primeiro teste real do sistema sucessório: o que acontece se um fundador adoecer ou morrer?</li>
+      <li>Hatyr aceita definitivamente seu papel subordinado ou cultiva apoio próprio entre a nova geração militar?</li>
+      <li>Arthur II, criado sob o Juramento Dinástico, será o herdeiro que o sistema espera?</li>
+      <li>Com Shah Rukh estável em Herat, Urgench arrisca sua primeira expansão comercial mais ousada?</li>
+    </ul>
+  </section>
+
+  <div class="chapter-break">
+    <svg class="wave big" viewBox="0 0 600 30" preserveAspectRatio="none"><path d="M0 22 Q 25 8 50 22 T 100 22 T 150 22 T 200 22 T 250 22 T 300 22 T 350 22 T 400 22 T 450 22 T 500 22 T 550 22 T 600 22" fill="none" stroke="#3E3A34" stroke-width="2.4"/></svg>
+  </div>
+
+  <header class="chapter-head">
+    <div class="seal seal-4">肆</div>
+    <div class="kicker">ург蘭 — CRÔNICA DA CIDADE-ESTADO</div>
+    <h1>Mandato IV</h1>
+    <p class="subtitle">"As Sementes que Plantamos" — 1415–1428</p>
+    <div class="meta">
+      <div><b>Monarca:</b> Sua Majestade Arthur I, de 45 a 58 anos</div>
+      <div><b>Conselho:</b> Toiaum (44→57) · Croesy (47→60, falecido em 1428) · Hatyr (44→57) · Arthur (45→58)</div>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none"><path d="M0 15 Q 25 5 50 15 T 100 15 T 150 15 T 200 15 T 250 15 T 300 15 T 350 15 T 400 15 T 450 15 T 500 15 T 550 15 T 600 15" fill="none" stroke="#A2381F" stroke-width="2"/></svg>
+
+  <section>
+    <h2><span class="num">壱</span>Situação Geral</h2>
+    <p>A década e meia em que Urgench deixa de ser apenas uma cidade tecnológica sobrevivente para se tornar um Estado com Constituição, códigos, bancos, universidade, exército de fuzis próprios e uma segunda geração já adulta pronta para herdar tudo isso — ou para contestá-lo. É também o mandato em que a mortalidade, adiada desde 1405, finalmente bate à porta do Conselho.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">弐</span>Crônica do Mandato</h2>
+    <p><strong>A formação das novas gerações.</strong> Arthur II, agora com quase trinta anos, tornou-se o primeiro produto completo do Juramento Dinástico: educado nas Academias, ordenado leigo consagrado pela Igreja local, e iniciado, a partir dos vinte anos, nos segredos técnicos revelados em camadas — eletricidade e mecânica primeiro, a existência real da viagem no tempo depois, e, aos vinte e cinco, acesso supervisionado aos arquivos digitais de 2026, sob juramento testemunhado pelos quatro fundadores. O rito, chamado "Segunda Aurora", tornou-se modelo para os demais herdeiros: o filho mais velho de Hatyr, brilhante nas armas mas menos disciplinado intelectualmente, recebeu apenas parte dos segredos técnicos e nenhum acesso aos arquivos — decisão que Hatyr contestou amargamente. A tensão entre sangue, mérito e fé explodiu em 1421, quando um sobrinho de Croesy tentou vender fragmentos de conhecimento sobre pólvora a um mercador timúrida — descoberto a tempo, foi exilado, não executado, precedente que muitos consideraram fraco diante do risco de vazamento tecnológico.</p>
+    <p><strong>Cidades-Jardim.</strong> A partir de 1417, o Conselho lançou as Vilas-Jardim de Urgench: bairros autossuficientes cercados por cinturões verdes, com zoneamento por função — operário, militar, clerical, técnico e, pela primeira vez, um bairro de estrangeiros genoveses e venezianos. A execução gerou conflitos: proprietários da periferia viram terras desvalorizadas por decreto; famílias muçulmanas protestaram contra a segregação espacial; nômades passaram a ser barrados por postos de fiscalização nas novas muralhas. O higienismo autoritário — inspeções compulsórias, demolições de moradias "insalubres" — rendeu tanto elogios estrangeiros quanto o apelido sussurrado de "os que arrancam a casa para plantar jardim".</p>
+    <p><strong>Saúde pública.</strong> Pasteurização, tratamento de água e vacinação em massa tornaram-se política de Estado desde 1416. Um surto de tifo em 1419 testou o sistema sanitário: quarentenas e água fervida reduziram drasticamente a mortalidade, mas curandeiros tradicionais e clérigos conservadores resistiram às inspeções, e um agente sanitário foi agredido ao interditar um poço contaminado. A mortalidade infantil caiu de forma acentuada, e a expectativa de vida já superava com folga a de qualquer cidade vizinha.</p>
+    <p><strong>Instituições, direito e indústria.</strong> A Constituição de 1420 consagrou a função social da propriedade, defendida por Croesy para legitimar os minifúndios. O Código Penal, moldado por Hatyr sob leitura rígida do "Direito do Inimigo", criou um regime duplo: cidadãos com garantias processuais e "inimigos do Estado" sob procedimentos sumários. Toiaum limitou a categoria a casos de traição comprovada, mas a linha era maleável. Vieram também o Código Civil, o Código Florestal — que chocou interesses agroindustriais ao proteger os próprios cinturões verdes — e a modernização tributária. Hospitais, a primeira universidade (Real Academia, 1424), uma agência de inteligência e prisões modernas completaram o arcabouço. A telemedicina, tentada via telégrafo, funcionou de forma limitada: orientava, mas não substituía, a presença médica.</p>
+    <p><strong>Economia e trabalho.</strong> O Banco Nacional de Desenvolvimento e o Fundo Soberano, criados em 1418, financiaram desde o alto-forno ampliado até a universidade. A previdência social, inspirada no modelo alemão de 1883, cobriu apenas trabalhadores urbanos formais, gerando ressentimento entre camponeses e artesãos independentes. Leis trabalhistas e cooperativismo consolidaram uma classe operária com identidade própria — e suas primeiras greves: em 1423, tecelões pararam por oito dias exigindo jornada menor, resolvida por mediação da Coroa, não repressão.</p>
+    <p><strong>Cultura, mídia e defesa.</strong> O sonho do rádio esbarrou na falta de indústria eletrônica: o que se conseguiu foi telefonia por fio entre bairros e uma imprensa oficial, o <em>Arauto de Urgench</em>, lida em voz alta nas praças. Escolas de música, um teatro, a primeira biblioteca pública e um protocinema experimental completaram a vida cultural. Na defesa, a siderurgia já permitia fabricar fuzis de repetição e metralhadoras leves localmente — um salto real, ainda que tanques e drones permanecessem restritos aos poucos exemplares originais de 1388. Armas nucleares, químicas ou biológicas seguiram fora de cogitação, tratadas como tabu absoluto.</p>
+    <p><strong>Vacinas e os limites da cura.</strong> A varíola foi contida por vacinação em massa desde 1417, e a catapora seguiu caminho semelhante. Compostos arsenicais deram à sífilis e à gonorreia seus primeiros remédios eficazes, tóxicos e escassos. Mas diante do câncer e da AIDS os fundadores enfrentaram sua derrota mais silenciosa: sem biotecnologia nem síntese química fina em escala, produzir antirretrovirais ou qualquer cura era simplesmente impossível. Croesy, já doente, resumiu em Conselho: "Trouxemos o mapa, mas não a estrada. Alguns rios só a próxima geração vai atravessar."</p>
+    <p><strong>A morte de Croesy.</strong> No inverno de 1428, aos sessenta anos, Croesy sucumbiu a uma febre entérica que os médicos formados por ele mesmo não conseguiram deter. Foi o primeiro dos quatro fundadores a morrer. O funeral, o mais solene já visto em Urgench, expôs de imediato as costuras frágeis do sistema sucessório de 1405: pela primeira vez o Conselho precisava cooptar um novo membro, e as três facções já divergiam antes mesmo do sepultamento.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">参</span>Decisões do Conselho</h2>
+    <p>O Conselho promulgou a Constituição, o Código Penal, o Código Civil, o Código Florestal e a modernização tributária; criou o Banco Nacional, o Fundo Soberano, a previdência e a agência de inteligência; instituiu o rito da "Segunda Aurora"; e, sob o choque da morte de Croesy, abriu o processo de cooptação de um novo membro, sem consenso alcançado até o fechamento deste mandato.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">肆</span>Parlamento Consultivo</h2>
+    <p>A Assembleia ganhou peso real: mediou a greve de 1423, pressionou com sucesso por previdência mais ampla (ainda recusada a camponeses) e protestou, sem êxito, contra o Código Florestal.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">伍</span>Reações Externas</h2>
+    <p>O Concílio de Constança encerrou-se em 1418 com a eleição de Martinho V, resolvendo o Cisma e obrigando Urgench a reconhecer formalmente Roma. Os otomanos, reunificados sob Mehmed I e depois Murad II desde 1421, entraram em guerra com Veneza em 1423, desviando atenções para longe de Khwarezm. Shah Rukh seguiu governando Herat com mão leve. Rumores sobre frotas Ming e navegadores portugueses avançando pela costa africana chegaram por mercadores — o mundo começava a parecer perigosamente pequeno.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">陸</span>Indicadores do Mandato IV <span style="font-size:15px;font-weight:400;color:#6b6252;">(consolidados, 1415–1428)</span></h2>
+    <p class="note">Estimativas comparativas retroativas — categorias de 2026 aplicadas a um Estado pré-moderno em institucionalização acelerada.</p>
+    <table>
+      <caption>Indicadores gerais — 1415 vs. 1428</caption>
+      <thead><tr><th>Indicador</th><th>1415</th><th>1428</th><th>Variação</th></tr></thead>
+      <tbody>
+        <tr><td>Inflação anual</td><td>~5%</td><td>~4%</td><td>Estabilização via Banco Nacional</td></tr>
+        <tr><td>Saneamento básico</td><td>85%</td><td>93%</td><td>+8 p.p.</td></tr>
+        <tr><td>Tratamento de esgoto</td><td>62%</td><td>78%</td><td>+16 p.p.</td></tr>
+        <tr><td>PIB nominal (equiv. 2026)</td><td>~US$ 780 milhões</td><td>~US$ 1,85 bilhão</td><td>Crescimento institucional</td></tr>
+        <tr><td>Ranking economias mundiais</td><td>Comparável a república italiana</td><td>Comparável a reino europeu médio</td><td>Ganho de relevância</td></tr>
+        <tr><td>Ranking maiores exércitos</td><td>Fora de ranking (~5.500)</td><td>Fora de ranking (~11.000)</td><td>Fuzis e metralhadoras próprios</td></tr>
+        <tr><td>IDH estimado</td><td>0,53</td><td>0,61</td><td>+0,08</td></tr>
+        <tr><td>PIB per capita</td><td>~US$ 8.480</td><td>~US$ 12.330</td><td>População ~150 mil hab.</td></tr>
+        <tr><td>Índice de Gini</td><td>0,47</td><td>0,43</td><td>Nova redução</td></tr>
+        <tr><td>Homicídios (por 100 mil/ano)</td><td>9</td><td>5</td><td>Queda continuada</td></tr>
+        <tr><td>Crescimento do Agro</td><td>94% da área irrigável</td><td>97%, +40% produtividade</td><td>Mecanização e cooperativismo</td></tr>
+        <tr><td>Construções civis</td><td>~21.000 moradias</td><td>~48.000 + Vilas-Jardim e universidade</td><td>Expansão urbana planejada</td></tr>
+        <tr><td>Indústria</td><td>Alto-forno e aço próprio</td><td>Fuzis, metralhadoras, farmacêutica nascente</td><td>Diversificação industrial</td></tr>
+        <tr><td>Setor de serviços</td><td>Telégrafo, comércio</td><td>Bancos, seguros, imprensa, ensino superior</td><td>Consolidação institucional</td></tr>
+        <tr><td>Extração de minérios</td><td>Ferro em escala, carvão inicial</td><td>Ferro e carvão plenos; prospecção de raros</td><td>Base para eletrônica futura</td></tr>
+        <tr><td>Dívida externa / PIB</td><td>~3%</td><td>~6%</td><td>Crédito internacional ampliado</td></tr>
+        <tr><td>Dívida interna / PIB</td><td>~16%</td><td>~22%</td><td>Financiamento institucional pesado</td></tr>
+        <tr><td>Desemprego</td><td>~5%</td><td>~3%</td><td>Quase pleno emprego</td></tr>
+        <tr><td>Alfabetização</td><td>~64%</td><td>~82%</td><td>Imprensa e escolas</td></tr>
+        <tr><td>Formação ensino básico</td><td>~79%</td><td>~91%</td><td>Cobertura quase universal</td></tr>
+        <tr><td>Formação ensino médio</td><td>~37%</td><td>~54%</td><td>Expansão técnica</td></tr>
+        <tr><td>Formação ensino superior</td><td>~7%</td><td>~14%</td><td>Real Academia vira universidade</td></tr>
+      </tbody>
+    </table>
+    <p>O período consolida Urgench como um Estado institucionalmente maduro — mas a dívida interna crescente e a fragilidade recém-exposta do sistema sucessório lembram que a solidez das instituições ainda não foi testada por uma crise de poder real.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">漆</span>Riscos, Tensões e Oportunidades</h2>
+    <p>Riscos centrais: (1) a cooptação de um novo membro do Conselho, em aberto, pode fraturar de vez a unidade restante; (2) a categoria de "inimigo do Estado" é uma arma perigosamente maleável; (3) o ressentimento de Hatyr, sem o contrapeso de Croesy, pode ganhar força; (4) os limites reconhecidos publicamente frente ao câncer e à AIDS podem abalar a aura de infalibilidade tecnológica do regime. Como oportunidade, a resolução do Cisma abre caminho para diplomacia católica mais ousada, e a nova geração de herdeiros é a mais bem formada que a cidade já produziu.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">捌</span>Ganchos para o Mandato V</h2>
+    <ul class="hooks">
+      <li>Quem ocupa a cadeira vazia de Croesy: um técnico, um herdeiro de sangue, ou alguém indicado pelo parlamento?</li>
+      <li>Hatyr, sem Croesy como contrapeso, avança sua agenda militar-dinástica?</li>
+      <li>A categoria de "inimigo do Estado" será usada contra um adversário político interno?</li>
+      <li>Como a nova geração de herdeiros reage à primeira morte real de um fundador?</li>
+      <li>O reconhecimento de Roma sob Martinho V rende a Urgench sua primeira embaixada permanente?</li>
+    </ul>
+  </section>
+
+  <div class="chapter-break">
+    <svg class="wave big" viewBox="0 0 600 30" preserveAspectRatio="none"><path d="M0 22 Q 25 8 50 22 T 100 22 T 150 22 T 200 22 T 250 22 T 300 22 T 350 22 T 400 22 T 450 22 T 500 22 T 550 22 T 600 22" fill="none" stroke="#2E5C55" stroke-width="2.4"/></svg>
+  </div>
+
+  <header class="chapter-head">
+    <div class="seal seal-5">伍</div>
+    <div class="kicker">ург蘭 — CRÔNICA DA CIDADE-ESTADO</div>
+    <h1>Mandato V</h1>
+    <p class="subtitle">"A Cadeira Vazia" — 1428–1442</p>
+    <div class="meta">
+      <div><b>Monarca:</b> Arthur I, 58→72 anos</div>
+      <div><b>Conselho:</b> Toiaum (57→71) · Hatyr (57→71, falecido em 1442) · Arthur (58→72) · Ismail (cooptado em 1429, ~29 anos)</div>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none"><path d="M0 15 Q 25 5 50 15 T 100 15 T 150 15 T 200 15 T 250 15 T 300 15 T 350 15 T 400 15 T 450 15 T 500 15 T 550 15 T 600 15" fill="none" stroke="#A2381F" stroke-width="2"/></svg>
+
+  <section>
+    <h2><span class="num">壱</span>Situação Geral</h2>
+    <p>O primeiro teste real da arquitetura sucessória de 1405 — e a segunda morte de um fundador, encerrando o mandato.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">弐</span>Crônica do Mandato</h2>
+    <p>A cooptação da cadeira de Croesy dividiu o Conselho por meses: Toiaum queria um clérigo, reforçando o peso religioso; Hatyr exigia a nomeação imediata do próprio filho; Arthur insistiu no princípio fundacional do mérito. Prevaleceu <strong>Ismail</strong>, administrador nascido em Urgench por volta de 1400, filho de um mercador convertido, formado desde criança sob tutela pessoal de Croesy — católico devoto o bastante para aplacar Toiaum, tecnocrata o bastante para satisfazer Arthur. Hatyr, derrotado pela terceira vez em uma votação decisiva, retirou-se progressivamente da vida política, concentrando-se apenas no comando militar; sua amargura, alimentada em silêncio, passou ao filho, criado ouvindo que "o mérito é a desculpa dos que já têm poder". As Vilas-Jardim ganharam uma segunda geração de bairros ao longo da linha férrea expandida; o Código de Processo Civil e o Código de Defesa do Consumidor foram promulgados em 1435, este último enfrentando forte resistência das corporações de ofício, acostumadas a fixar preços sem fiscalização externa. A siderurgia permitiu artilharia leve própria e fuzis padronizados em escala regimental. Em 1439, notícias do Concílio de Florença — tentativa de unir as Igrejas Romana e Ortodoxa contra o avanço otomano — chegaram a Urgench com entusiasmo cauteloso do Conselho Espiritual-Clerical, ainda sem repercussão prática imediata. Hatyr morreu em 1442, aos 71 anos, de um mal súbito no coração, durante uma inspeção de guarnição — morte relativamente serena para quem vivera de espada, mas que deixou um vazio militar e uma sucessão de amargura não resolvida em seu filho.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">参</span>Decisões do Conselho</h2>
+    <p>Cooptação de Ismail; Código de Processo Civil e Código de Defesa do Consumidor; expansão da segunda geração de Vilas-Jardim; abertura, ao fim do mandato, do processo de sucessão da cadeira de Hatyr.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">肆</span>Parlamento Consultivo</h2>
+    <p>As corporações resistiram ao Código de Defesa do Consumidor, mas aceitaram-no após a Coroa garantir um período de transição de cinco anos para adequação.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">伍</span>Reações Externas</h2>
+    <p>O mundo otomano-cristão caminhava para o confronto: a cruzada húngaro-polonesa se organizava contra Murad II, sem envolvimento direto de Urgench. O Concílio de Florença (1439) tentou, sem sucesso duradouro, unir as Igrejas.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">陸</span>Indicadores do Mandato V <span style="font-size:15px;font-weight:400;color:#6b6252;">(1428–1442)</span></h2>
+    <table class="idx-table">
+      <caption>Indicadores gerais — 1428 vs. 1442</caption>
+      <thead><tr><th>Indicador</th><th>1428</th><th>1442</th><th>Variação</th></tr></thead>
+      <tbody>
+        <tr><td>Inflação</td><td>~4%</td><td>~3,5%</td><td>Estável</td></tr>
+        <tr><td>Saneamento básico</td><td>93%</td><td>97%</td><td>+4 p.p.</td></tr>
+        <tr><td>Tratamento de esgoto</td><td>78%</td><td>88%</td><td>+10 p.p.</td></tr>
+        <tr><td>PIB nominal</td><td>~US$ 1,85 bi</td><td>~US$ 3,6 bi</td><td>Crescimento sustentado</td></tr>
+        <tr><td>Ranking economias</td><td>Reino europeu médio</td><td>Reino europeu relevante (ex.: Aragão)</td><td>Ganho de peso</td></tr>
+        <tr><td>Ranking exércitos</td><td>~11.000</td><td>~16.000 (artilharia própria)</td><td>Reforço qualitativo</td></tr>
+        <tr><td>IDH</td><td>0,61</td><td>0,67</td><td>+0,06</td></tr>
+        <tr><td>PIB per capita</td><td>~US$ 12.330</td><td>~US$ 17.140</td><td>Pop. ~210 mil</td></tr>
+        <tr><td>Gini</td><td>0,43</td><td>0,40</td><td>Redução</td></tr>
+        <tr><td>Homicídios /100 mil</td><td>5</td><td>3,5</td><td>Queda</td></tr>
+        <tr><td>Desemprego</td><td>3%</td><td>2,5%</td><td>Quase pleno emprego</td></tr>
+        <tr><td>Alfabetização</td><td>82%</td><td>90%</td><td>Expansão</td></tr>
+        <tr><td>Ens. básico/médio/superior</td><td>91/54/14%</td><td>96/65/20%</td><td>Crescimento contínuo</td></tr>
+        <tr><td>Dívida ext./int. PIB</td><td>6%/22%</td><td>9%/27%</td><td>Financiamento institucional</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">漆</span>Riscos e Oportunidades</h2>
+    <p>A morte de Hatyr deixa uma cadeira militar em aberto exatamente quando a guerra cristã-otomana se aproxima do clímax; o filho ressentido de Hatyr é candidato óbvio, mas nenhum precedente garante sua escolha.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">捌</span>Ganchos</h2>
+    <p>Quem assume a cadeira de Hatyr? Como Urgench reage à iminente batalha entre cristandade e otomanos?</p>
+  </section>
+
+  <div class="chapter-break">
+    <svg class="wave big" viewBox="0 0 600 30" preserveAspectRatio="none"><path d="M0 22 Q 25 8 50 22 T 100 22 T 150 22 T 200 22 T 250 22 T 300 22 T 350 22 T 400 22 T 450 22 T 500 22 T 550 22 T 600 22" fill="none" stroke="#6B1E1E" stroke-width="2.4"/></svg>
+  </div>
+
+  <header class="chapter-head">
+    <div class="seal seal-6">陸</div>
+    <div class="kicker">ург蘭 — CRÔNICA DA CIDADE-ESTADO</div>
+    <h1>Mandato VI</h1>
+    <p class="subtitle">"A Cidade que Chorou por Constantinopla" — 1442–1453</p>
+    <div class="meta">
+      <div><b>Monarca:</b> Arthur I, 72→83 anos</div>
+      <div><b>Conselho:</b> Toiaum (71→82, falecido em 1453) · Arthur (72→83) · Ismail (42→53) · Yusuf, filho de Hatyr, cooptado em 1443 (~48 anos)</div>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none"><path d="M0 15 Q 25 5 50 15 T 100 15 T 150 15 T 200 15 T 250 15 T 300 15 T 350 15 T 400 15 T 450 15 T 500 15 T 550 15 T 600 15" fill="none" stroke="#A2381F" stroke-width="2"/></svg>
+
+  <section>
+    <h2><span class="num">壱</span>Situação Geral</h2>
+    <p>A década em que o mundo cristão sofre seu golpe mais duro em séculos, e Urgench perde seu fundador mais devoto no mesmo ano.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">弐</span>Crônica do Mandato</h2>
+    <p>Yusuf assumiu a cadeira militar do pai por consenso quase automático — ninguém mais tinha experiência de comando comparável, e negar-lhe o posto após a morte de Hatyr pareceria vingança. Ele trouxe consigo o ressentimento herdado, mas também disciplina genuína. Em 1444, notícias da derrota cristã em Varna, com a morte do rei Ladislau da Polônia-Hungria, atingiram Urgench como um mau presságio; Toiaum, já octogenário, passou a rezar publicamente pela cristandade ameaçada. A grande conquista técnica do mandato foi a <strong>telegrafia sem fio</strong>: por volta de 1449, engenheiros urguenchianos, combinando conhecimento preservado de eletromagnetismo com décadas de siderurgia e manufatura de precisão, transmitiram o primeiro sinal Morse sem cabos entre a capital e um posto a cinquenta quilômetros — um salto que nenhuma outra potência da Terra possuía, e que o Conselho decidiu manter em sigilo militar absoluto. Em maio de 1453, a notícia mais temida chegou por caravana, semanas atrasada: Constantinopla, cercada por Mehmet II, havia caído. O último bastião de Bizâncio desaparecia depois de mil anos. Toiaum, já fragilizado, recebeu a notícia em silêncio e morreu poucas semanas depois, aos 82 anos — os cronistas da corte registraram que "morreu de ver o mundo que amava se fechar". Foi sucedido no Conselho Espiritual-Clerical pelo <strong>Bispo Elias</strong>, primeiro clérigo nascido e ordenado em Urgench a alcançar tal posto — o fruto mais completo do projeto eclesiástico que Toiaum começara quase setenta anos antes. Refugiados gregos, entre eles alguns eruditos carregando manuscritos clássicos salvos da cidade tomada, começaram a aparecer nas rotas comerciais do Cáspio nos meses seguintes; um punhado, atraído por rumores sobre a "cidade cristã do Oriente", chegou a Urgench já no fim do mandato, trazendo conhecimento clássico que a Real Academia recebeu com fascínio.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">参</span>Decisões do Conselho</h2>
+    <p>Cooptação de Yusuf; sigilo militar sobre a telegrafia sem fio; luto oficial de um ano pela queda de Constantinopla; acolhimento controlado de refugiados eruditos gregos; cooptação do Bispo Elias.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">肆</span>Parlamento Consultivo</h2>
+    <p>A Assembleia pressionou por maior investimento defensivo após Varna e Constantinopla — atendida parcialmente, com expansão da conscrição das Academias.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">伍</span>Reações Externas</h2>
+    <p>Batalha de Varna (1444): derrota cristã. Queda de Constantinopla (1453): fim de Bizâncio, choque em toda a cristandade. Shah Rukh morreu em 1447, abrindo nova fragmentação timúrida distante, sem ameaça direta a Khwarezm.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">陸</span>Indicadores do Mandato VI <span style="font-size:15px;font-weight:400;color:#6b6252;">(1442–1453)</span></h2>
+    <table class="idx-table">
+      <caption>Indicadores gerais — 1442 vs. 1453</caption>
+      <thead><tr><th>Indicador</th><th>1442</th><th>1453</th><th>Variação</th></tr></thead>
+      <tbody>
+        <tr><td>Inflação</td><td>3,5%</td><td>3%</td><td>Estável</td></tr>
+        <tr><td>Saneamento/Esgoto</td><td>97%/88%</td><td>99%/94%</td><td>Quase universal</td></tr>
+        <tr><td>PIB nominal</td><td>~US$ 3,6 bi</td><td>~US$ 6,2 bi</td><td>Crescimento sustentado</td></tr>
+        <tr><td>Ranking exércitos</td><td>~16.000</td><td>~23.000 (telégrafo sem fio)</td><td>Vantagem tecnológica única</td></tr>
+        <tr><td>IDH</td><td>0,67</td><td>0,71</td><td>+0,04</td></tr>
+        <tr><td>PIB per capita</td><td>~US$ 17.140</td><td>~US$ 22.960</td><td>Pop. ~270 mil</td></tr>
+        <tr><td>Gini</td><td>0,40</td><td>0,38</td><td>Redução</td></tr>
+        <tr><td>Homicídios /100 mil</td><td>3,5</td><td>2,5</td><td>Queda</td></tr>
+        <tr><td>Alfabetização</td><td>90%</td><td>94%</td><td>Expansão</td></tr>
+        <tr><td>Ens. básico/médio/superior</td><td>96/65/20%</td><td>98/73/26%</td><td>Crescimento contínuo</td></tr>
+        <tr><td>Dívida ext./int. PIB</td><td>9%/27%</td><td>12%/31%</td><td>Financiamento institucional</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">漆</span>Riscos e Oportunidades</h2>
+    <p>A queda de Constantinopla deixa a cristandade oriental sem âncora, e Urgench, isolada, pode se tornar refúgio simbólico para eruditos e clérigos gregos — oportunidade cultural rara, mas também risco de atrair atenção otomana indesejada.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">捌</span>Ganchos</h2>
+    <p>O que os manuscritos gregos trazem para a Real Academia? Yusuf consegue superar o legado de ressentimento do pai?</p>
+  </section>
+
+  <div class="chapter-break">
+    <svg class="wave big" viewBox="0 0 600 30" preserveAspectRatio="none"><path d="M0 22 Q 25 8 50 22 T 100 22 T 150 22 T 200 22 T 250 22 T 300 22 T 350 22 T 400 22 T 450 22 T 500 22 T 550 22 T 600 22" fill="none" stroke="#A9873F" stroke-width="2.4"/></svg>
+  </div>
+
+  <header class="chapter-head">
+    <div class="seal seal-7">漆</div>
+    <div class="kicker">ург蘭 — CRÔNICA DA CIDADE-ESTADO</div>
+    <h1>Mandato VII</h1>
+    <p class="subtitle">"O Fim dos Fundadores" — 1453–1465</p>
+    <div class="meta">
+      <div><b>Monarca:</b> Arthur I, 83→95 anos, falecido em 1465</div>
+      <div><b>Conselho:</b> Arthur (83→95) · Ismail (53→65) · Yusuf (48→60) · Bispo Elias (~55→67)</div>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none"><path d="M0 15 Q 25 5 50 15 T 100 15 T 150 15 T 200 15 T 250 15 T 300 15 T 350 15 T 400 15 T 450 15 T 500 15 T 550 15 T 600 15" fill="none" stroke="#A2381F" stroke-width="2"/></svg>
+
+  <section>
+    <h2><span class="num">壱</span>Situação Geral</h2>
+    <p>O último ato da geração fundadora — Arthur, sozinho entre os quatro originais, governa até o limite da vida, enquanto Urgench já não precisa mais deles para funcionar.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">弐</span>Crônica do Mandato</h2>
+    <p>Os doze anos finais do reinado de Arthur foram, paradoxalmente, os mais tranquilos desde a fundação: sem crises sucessórias abertas, sem exércitos inimigos às portas, a cidade amadureceu sob um Conselho já majoritariamente de segunda geração. A indústria bélica deu seus últimos grandes saltos da era fundadora: submetralhadoras entraram em produção em 1457; uma pequena frota de canhoneiras fluviais blindadas passou a patrulhar o Amu Dária; armaduras de placas de aço temperado equiparam a guarda de elite; e, em 1463, o primeiro protótipo de veículo blindado sobre lagartas — rústico, lento, mas real — foi testado fora dos muros, batizado internamente de "o Neto do Tanque", numa homenagem irônica às máquinas originais de 1388, já havia muito reduzidas a peças de museu. Os drones remanescentes, com baterias mortas desde a década de 1440, tornaram-se relíquias exibidas na Real Academia como lembrete físico dos limites do que quatro pessoas podem carregar através do tempo. Em 1464, engenheiros conseguiram, enfim, transmitir a primeira voz humana por ondas de rádio experimentais — um sussurro distorcido, ouvido por meia dúzia de pessoas, mas o suficiente para provar que o caminho para a verdadeira radiodifusão finalmente se abria. Sobre câncer, AIDS e HPV, o veredito permaneceu o de décadas antes: irrealizáveis com a base científica disponível, um limite que a Real Academia já ensinava às novas gerações não como fracasso, mas como lição de humildade fundacional. Arthur II, agora um homem maduro de quase setenta anos, já governava de fato ao lado do pai havia mais de uma década quando Arthur I morreu, em paz, no inverno de 1465, aos 95 anos — a mais longeva das quatro vidas que reconstruíram Urgench. Seu funeral, transmitido por telégrafo sem fio a cada posto fronteiriço, marcou oficialmente o fim da Era dos Fundadores.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">参</span>Decisões do Conselho</h2>
+    <p>Produção de submetralhadoras e canhoneiras fluviais; teste do primeiro blindado sobre lagartas; primeira transmissão de voz por rádio; preparação formal, ao longo de anos, da coroação de Arthur II conforme o Juramento Dinástico de 1405.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">肆</span>Parlamento Consultivo</h2>
+    <p>A Assembleia, já uma instituição centenária de fato, participou ativamente das cerimônias de luto e transição, consolidando seu papel histórico como voz das corporações mesmo sem poder de governo direto.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">伍</span>Reações Externas</h2>
+    <p>O mundo pós-1453 reorganizava-se sob domínio otomano crescente nos Bálcãs; Moscóvia, sob Ivan III a partir de 1462, começava sua ascensão rumo à futura libertação do jugo tártaro; a imprensa de Gutenberg, cujos rumores chegaram por mercadores já na década de 1450, fascinou o Bispo Elias como eco distante do próprio "Arauto de Urgench".</p>
+  </section>
+
+  <section>
+    <h2><span class="num">陸</span>Indicadores do Mandato VII <span style="font-size:15px;font-weight:400;color:#6b6252;">(1453–1465)</span></h2>
+    <table class="idx-table">
+      <caption>Indicadores gerais — 1453 vs. 1465</caption>
+      <thead><tr><th>Indicador</th><th>1453</th><th>1465</th><th>Variação</th></tr></thead>
+      <tbody>
+        <tr><td>Inflação</td><td>3%</td><td>2,5%</td><td>Estável</td></tr>
+        <tr><td>Saneamento/Esgoto</td><td>99%/94%</td><td>99,5%/97%</td><td>Praticamente universal</td></tr>
+        <tr><td>PIB nominal</td><td>~US$ 6,2 bi</td><td>~US$ 10,5 bi</td><td>Maturidade econômica</td></tr>
+        <tr><td>Ranking economias</td><td>Reino europeu relevante</td><td>Potência média europeia (ex.: Portugal)</td><td>Ganho de peso final</td></tr>
+        <tr><td>Ranking exércitos</td><td>~23.000</td><td>~34.000 (submetralhadoras, blindado protótipo)</td><td>Pico tecnológico fundador</td></tr>
+        <tr><td>IDH</td><td>0,71</td><td>0,75</td><td>+0,04</td></tr>
+        <tr><td>PIB per capita</td><td>~US$ 22.960</td><td>~US$ 31.800</td><td>Pop. ~330 mil</td></tr>
+        <tr><td>Gini</td><td>0,38</td><td>0,36</td><td>Redução final</td></tr>
+        <tr><td>Homicídios /100 mil</td><td>2,5</td><td>2</td><td>Queda</td></tr>
+        <tr><td>Alfabetização</td><td>94%</td><td>97%</td><td>Quase universal</td></tr>
+        <tr><td>Ens. básico/médio/superior</td><td>98/73/26%</td><td>99/80/32%</td><td>Maturidade educacional</td></tr>
+        <tr><td>Dívida ext./int. PIB</td><td>12%/31%</td><td>15%/35%</td><td>Financiamento institucional pesado</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">漆</span>Riscos e Oportunidades</h2>
+    <p>O fim literal da geração fundadora expõe Urgench, pela primeira vez em oitenta anos, a um governo sem nenhum dos quatro arquitetos originais — o verdadeiro teste de tudo que construíram só começa agora.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">捌</span>Ganchos para o Mandato VIII</h2>
+    <ul class="hooks">
+      <li>Arthur II governa sozinho ou reabre o debate sucessório do zero?</li>
+      <li>A verdadeira radiodifusão chega a se tornar realidade sob a nova geração?</li>
+      <li>Yusuf, agora o membro mais velho do Conselho, finalmente supera — ou finalmente cede — ao ressentimento herdado do pai?</li>
+      <li>Como o mundo pós-Constantinopla e pós-Gutenberg trata uma Urgench sem seus fundadores lendários?</li>
+    </ul>
+  </section>
+
+  <div class="chapter-break">
+    <svg class="wave big" viewBox="0 0 600 30" preserveAspectRatio="none"><path d="M0 22 Q 25 8 50 22 T 100 22 T 150 22 T 200 22 T 250 22 T 300 22 T 350 22 T 400 22 T 450 22 T 500 22 T 550 22 T 600 22" fill="none" stroke="#4A2545" stroke-width="2.4"/></svg>
+  </div>
+
+  <header class="chapter-head">
+    <div class="seal seal-8">捌</div>
+    <div class="kicker">ург蘭 — CRÔNICA DA CIDADE-ESTADO</div>
+    <h1>Mandato VIII</h1>
+    <p class="subtitle">"O Legislador" — Reinado de Arthur II, 1466–1481</p>
+    <div class="meta">
+      <div><b>Monarca:</b> Arthur II, ~68→83 anos, falecido em 1481</div>
+      <div><b>Conselho:</b> Arthur II · Ismail (66→81) · Yusuf (60→73, falecido 1473) → General Temir · Bispo Elias (67→82)</div>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none"><path d="M0 15 Q 25 5 50 15 T 100 15 T 150 15 T 200 15 T 250 15 T 300 15 T 350 15 T 400 15 T 450 15 T 500 15 T 550 15 T 600 15" fill="none" stroke="#A2381F" stroke-width="2"/></svg>
+
+  <section>
+    <h2><span class="num">壱</span>Situação Geral</h2>
+    <p>O herdeiro que cresceu à sombra de lendas decide não apenas preservar o legado fundador, mas codificá-lo, burocratizá-lo e — em alguns pontos — rompê-lo. É o mandato mais denso em reformas desde a própria fundação, e o mais controverso desde a criação do Direito Penal do Inimigo.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">弐</span>Crônica do Mandato</h2>
+    <p><strong>Estado e poder.</strong> Em 1467, Arthur II propôs substituir as quatro cadeiras vitalícias por um Conselho de Ministros com dezoito pastas. Yusuf, ainda vivo, ameaçou romper com a Coroa, e Urgench viveu semanas à beira de crise institucional, com rumores de golpe nos quartéis. A solução preservou o Conselho de Estado como <strong>Alto Conselho</strong> — guardião constitucional e árbitro final —, enquanto dezoito ministérios assumiram a administração cotidiana. O parlamento foi dissolvido e reconvocado sob nova composição obrigatória de sindicatos laborais, mistos e patronais, e as corporações passaram a incluir cooperativistas — reestruturação que dividiu artesãos tradicionais (autonomia perdida) e trabalhadores organizados (voz formal ganha). A Lei Antitruste de 1471 colidiu de imediato com as estatais recém-criadas, isentas como "monopólios naturais de interesse nacional" — exceção que corporações privadas consideraram hipocrisia disfarçada de modernização.</p>
+    <p><strong>Sociedade, língua e fé.</strong> A migração linguística do turcomano ao latim avançou por gerações, não por decreto instantâneo: escolas bilíngues e alta administração adotaram o latim como prestígio católico, mas ruas e lares seguiram em turcomano — fratura geracional já vista como permanente. Muito mais sombrio foi o decreto de 1469 que proibiu sinagogas, mesquitas e cultos fora da ortodoxia romana: fechamento forçado de templos, prisões sob a categoria de "inimigo do Estado" aplicada a líderes religiosos, e êxodo de milhares de famílias judaicas e muçulmanas. Alguns resistiram e viraram mártires silenciosos; comunidades sufi sincréticas sofreram perseguição especialmente dura. O próprio Bispo Elias registrou desconforto privado com métodos que via como contrários à conversão pela caridade que Toiaum sempre pregara. Mercadores expulsos levaram redes comerciais insubstituíveis, e a antiga fama de tolerância de Urgench evaporou nas caravanserais. Em 1472 seguiu-se a proibição da maçonaria, gerando caça a sociedades secretas com tantos falsos positivos quanto conspiradores reais. Do lado construtivo, o primeiro orfanato abriu em 1470 — acolhendo, entre outros, órfãos das próprias perseguições —, e a Real Academia ganhou três novas faculdades.</p>
+    <p><strong>Economia e indústria.</strong> Entre 1466 e 1470 nasceram a Societas Metallurgica Nationalis, a Societas Petrochemica Nationalis, a Societas Metallorum Excavandorum et Vecturae Nationalis, a Societas Energiae Nationalis, uma nova Casa da Moeda, a Societas Motorum Urgenchense e as Tabernae Cursualis (correio estatal). O capital veio do Fundo Soberano e do Banco Nacional; a burocracia inchou e o nepotismo nas diretorias virou piada recorrente. A exportação de borracha e papel, mirando uma futura indústria de impressos, aumentou a dependência de poucos produtos primários. Arthur II doou recursos próprios às periferias mais pobres — legitimidade genuína, criticada por parte do clero como clientelismo disfarçado.</p>
+    <p><strong>Ciência e saúde.</strong> Novos papéis trazidos por viagem no tempo, cada vez mais caros e racionados, ergueram os primeiros laboratórios científicos reais, com biologia e química no currículo da Real Academia. A cannabis medicinal, proposta em 1474, foi aceita por Bispo Elias em uso terapêutico estritamente regulado, rejeitando uso recreativo — posição que conteve, sem eliminar, um mercado negro paralelo. Uma agência de vigilância alimentícia passou a inspecionar mercados e matadouros, reduzindo surtos mas irritando comerciantes. Laboratórios, clínicas e os primeiros tribunais civis modernos foram erguidos dentro do modelo de Vilas-Jardim.</p>
+    <p><strong>A morte de Arthur II.</strong> Em 1481 — o mesmo ano da morte do próprio Mehmed II, conquistador de Constantinopla —, Arthur II morreu aos 83 anos, deixando Urgench mais burocrática, científica, dividida e rica do que a recebera.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">参</span>Decisões do Conselho e de Arthur II</h2>
+    <p>Migração linguística ao latim; seis estatais e os Correios; regulação da cannabis medicinal; laboratórios e currículo de ciências; construção de laboratórios, clínicas e tribunais; Conselho de Ministros com Alto Conselho preservado; agência de vigilância alimentícia; continuidade das Vilas-Jardim; legislação sindical e parlamento recomposto; lei antitruste com exceção estatal; proibição de sinagogas e mesquitas; proibição da maçonaria; incentivo à exportação de borracha e papel; assistência social direta; orfanato e novas faculdades.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">肆</span>Parlamento Consultivo</h2>
+    <p>Reconvocado sob composição sindical-cooperativista em 1468, tornou-se mais representativo e mais controlado — corporativismo clássico que consolidou o Estado sem eliminar a pressão popular.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">伍</span>Reações Externas</h2>
+    <p>A Guerra Otomano-Veneziana (1463–1479) drenou atenção otomana; a queda de Caffa em 1475 rompeu o canal diplomático genovês com Roma. Ivan III completou o fim do jugo tártaro em 1480. A morte de Mehmed II em 1481 abriu disputa sucessória otomana entre Bayezid II e Djem.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">陸</span>Indicadores do Mandato VIII <span style="font-size:15px;font-weight:400;color:#6b6252;">(1466–1481)</span></h2>
+    <table class="idx-table">
+      <caption>Indicadores gerais — 1466 vs. 1481</caption>
+      <thead><tr><th>Indicador</th><th>1466</th><th>1481</th><th>Variação</th></tr></thead>
+      <tbody>
+        <tr><td>Inflação</td><td>2,5%</td><td>3,2%</td><td>Alta por gasto estatal</td></tr>
+        <tr><td>Saneamento/Esgoto</td><td>99,5%/97%</td><td>99,8%/98,5%</td><td>Quase pleno</td></tr>
+        <tr><td>PIB nominal</td><td>~US$ 10,5 bi</td><td>~US$ 19 bi</td><td>Expansão via estatais</td></tr>
+        <tr><td>Ranking economias</td><td>Potência média europeia</td><td>Potência regional de 1ª linha</td><td>Ganho, com atrito social</td></tr>
+        <tr><td>Ranking exércitos</td><td>~34.000</td><td>~52.000</td><td>Indústria bélica estatal</td></tr>
+        <tr><td>IDH</td><td>0,75</td><td>0,79</td><td>+0,04</td></tr>
+        <tr><td>PIB per capita</td><td>~US$ 31.800</td><td>~US$ 44.200</td><td>Pop. ~430 mil</td></tr>
+        <tr><td>Gini</td><td>0,36</td><td>0,34</td><td>Redução moderada</td></tr>
+        <tr><td>Homicídios /100 mil</td><td>2</td><td>2,3</td><td>Leve alta (perseguições)</td></tr>
+        <tr><td>Desemprego</td><td>1,8%</td><td>2,4%</td><td>Disrupção trabalhista</td></tr>
+        <tr><td>Alfabetização</td><td>97%</td><td>98,5%</td><td>Expansão com atrito linguístico</td></tr>
+        <tr><td>Ens. básico/médio/superior</td><td>99/80/32%</td><td>99,5/86/42%</td><td>Universidades novas</td></tr>
+        <tr><td>Dívida ext./int. PIB</td><td>15%/35%</td><td>19%/44%</td><td>Financiamento pesado</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">漆</span>Riscos, Tensões e Oportunidades</h2>
+    <p>O êxodo religioso corrói redes comerciais insubstituíveis e mancha a reputação internacional; a exceção antitruste nacionaliza setores inteiros; a dívida interna acima de 40% do PIB preocupa o Banco Nacional. Como oportunidade, a burocracia ministerial profissionaliza a governança para além da vontade de um só governante.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">捌</span>Ganchos para o Mandato IX</h2>
+    <p>Quem sucede Arthur II? Como as comunidades expulsas em 1469 são lembradas — ou apagadas — pela memória oficial? A dívida interna crescente se torna crise?</p>
+  </section>
+
+  <div class="chapter-break">
+    <svg class="wave big" viewBox="0 0 600 30" preserveAspectRatio="none"><path d="M0 22 Q 25 8 50 22 T 100 22 T 150 22 T 200 22 T 250 22 T 300 22 T 350 22 T 400 22 T 450 22 T 500 22 T 550 22 T 600 22" fill="none" stroke="#1E5548" stroke-width="2.4"/></svg>
+  </div>
+
+  <header class="chapter-head">
+    <div class="seal seal-9">玖</div>
+    <div class="kicker">ург蘭 — CRÔNICA DA CIDADE-ESTADO</div>
+    <h1>Mandato IX</h1>
+    <p class="subtitle">"O Século que Termina" — Reinado de Arthur III, 1481–1500</p>
+    <div class="meta">
+      <div><b>Monarca:</b> Arthur III (filho de Arthur II), ~35→54 anos</div>
+      <div><b>Alto Conselho:</b> Arthur III · Ismail (81→falecido 1483) → Mestre Rafael · General Temir (~50→69) · Bispo Elias (82→falecido 1489) → Bispo Tomás</div>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none"><path d="M0 15 Q 25 5 50 15 T 100 15 T 150 15 T 200 15 T 250 15 T 300 15 T 350 15 T 400 15 T 450 15 T 500 15 T 550 15 T 600 15" fill="none" stroke="#A2381F" stroke-width="2"/></svg>
+
+  <section>
+    <h2><span class="num">壱</span>Situação Geral</h2>
+    <p>A terceira geração assume um Estado já plenamente burocrático, industrial e cientificamente ambicioso — mas também um mundo que, pela primeira vez, começa a se mover por rotas marítimas que ignoram por completo a Rota da Seda de onde Urgench extrai sua riqueza.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">弐</span>Crônica do Mandato</h2>
+    <p>Arthur III, formado sob o mesmo Juramento Dinástico que unificara Ismail, Temir e Elias décadas antes, herdou um Estado estável o bastante para consolidar em vez de reformar. Ismail morreu em 1483, sucedido por <strong>Mestre Rafael</strong>, primeiro chefe do Conselho Técnico-Científico formado inteiramente nos novos laboratórios — marco de que a amplificação tecnológica iniciada em 1400 finalmente produzia frutos autossustentáveis. O Bispo Elias morreu em 1489, sucedido pelo <strong>Bispo Tomás</strong>, que consolidou — sem reverter — a exclusividade católica, amenizando discretamente a perseguição ativa em favor de vigilância mais silenciosa. A migração linguística atingiu, por volta de 1495, equilíbrio permanente: liturgia, direito e alta administração em latim; ruas e lares em turcomano — diglossia já tratada como estado final. As estatais amadureceram, com a Societas Petrochemica alcançando refino em escala real e a Societas Motorum produzindo os primeiros veículos genuinamente urguenchianos. O radioamadorismo produziu, em 1493, a primeira transmissão pública regular de voz — poucos minutos diários, ouvidos apenas em prédios ministeriais.</p>
+    <p>O choque do mandato veio de fora. A conclusão da Reconquista em 1492 chegou como vitória cristã distante; muito mais perturbadora foi a notícia, anos depois, de que navegadores castelhanos haviam cruzado o oceano ocidental, e que portugueses avançavam ano após ano pela costa africana. Em 1498 confirmou-se: uma frota portuguesa alcançara a Índia contornando a África inteira. O impacto imediato foi nulo — as caravanas do Cáspio seguiram fluindo —, mas o Ministério da Fazenda registrou, pela primeira vez em cento e dez anos de história, um temor estrutural: se o comércio Europa-Ásia deixasse de depender das rotas terrestres, toda a riqueza construída sobre pedágios e posição geográfica poderia, em uma ou duas gerações, tornar-se obsoleta. Nenhuma reforma interna resolvia isso — e o Conselho, pela primeira vez, debateu se o isolamento defensivo ainda fazia sentido num mundo que se abria para o mar.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">参</span>Decisões do Alto Conselho</h2>
+    <p>Cooptação de Mestre Rafael e Bispo Tomás; consolidação sem reversão da política religiosa de 1469; maturação das estatais; primeira transmissão pública de rádio; abertura do debate sobre revisão da doutrina de isolamento diante das rotas marítimas europeias.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">肆</span>Parlamento Consultivo</h2>
+    <p>Já plenamente corporativista-sindical, passou a debater política externa pela primeira vez, pressionado por comerciantes temerosos da concorrência marítima.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">伍</span>Reações Externas</h2>
+    <p>Fim da Reconquista (1492); viagens de Colombo (1492) e Vasco da Gama (1497–1499); início das Guerras Italianas (1494); ascensão de um jovem líder xiita, Ismail Safávida, no Azerbaijão, mencionado com crescente frequência nos relatórios de espionagem do fim da década.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">陸</span>Indicadores do Mandato IX <span style="font-size:15px;font-weight:400;color:#6b6252;">(1481–1500)</span></h2>
+    <table class="idx-table">
+      <caption>Indicadores gerais — 1481 vs. 1500</caption>
+      <thead><tr><th>Indicador</th><th>1481</th><th>1500</th><th>Variação</th></tr></thead>
+      <tbody>
+        <tr><td>Inflação</td><td>3,2%</td><td>2,6%</td><td>Estabilização</td></tr>
+        <tr><td>Saneamento/Esgoto</td><td>99,8%/98,5%</td><td>99,9%/99,3%</td><td>Praticamente total</td></tr>
+        <tr><td>PIB nominal</td><td>~US$ 19 bi</td><td>~US$ 34 bi</td><td>Maturidade das estatais</td></tr>
+        <tr><td>Ranking economias</td><td>Potência regional de 1ª linha</td><td>Potência europeia média-alta</td><td>Pico da Era Fundadora</td></tr>
+        <tr><td>Ranking exércitos</td><td>~52.000</td><td>~78.000</td><td>Indústria bélica plena</td></tr>
+        <tr><td>IDH</td><td>0,79</td><td>0,83</td><td>+0,04</td></tr>
+        <tr><td>PIB per capita</td><td>~US$ 44.200</td><td>~US$ 53.100</td><td>Pop. ~640 mil</td></tr>
+        <tr><td>Gini</td><td>0,34</td><td>0,31</td><td>Redução</td></tr>
+        <tr><td>Homicídios /100 mil</td><td>2,3</td><td>1,6</td><td>Estabilização pós-perseguições</td></tr>
+        <tr><td>Desemprego</td><td>2,4%</td><td>1,9%</td><td>Absorção pelas estatais</td></tr>
+        <tr><td>Alfabetização</td><td>98,5%</td><td>99,4%</td><td>Quase total</td></tr>
+        <tr><td>Ens. básico/médio/superior</td><td>99,5/86/42%</td><td>99,8/91/51%</td><td>Maturidade educacional</td></tr>
+        <tr><td>Dívida ext./int. PIB</td><td>19%/44%</td><td>24%/51%</td><td>Nível de atenção crescente</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">漆</span>Riscos, Tensões e Oportunidades</h2>
+    <p>O risco estrutural de longo prazo — a possível obsolescência da posição geográfica de Urgench diante das rotas marítimas — supera qualquer crise interna do século; a dívida interna em 51% do PIB já preocupa vozes conservadoras da Fazenda; a ascensão de Ismail Safávida é observada sem clareza sobre seu significado futuro.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">捌</span>Ganchos para o Mandato X</h2>
+    <ul class="hooks">
+      <li>Como Urgench se adapta a um mundo que descobriu o mar?</li>
+      <li>A dívida interna crescente se torna crise fiscal?</li>
+      <li>O que o jovem líder safávida representa para a região?</li>
+      <li>A diglossia latim-turcomano se rompe em alguma direção?</li>
+    </ul>
+  </section>
+
+  <footer>栄枯盛衰 — a simulação chega a 1500, aguardando comando para o Mandato X</footer>
+</div>
+</body>
+</html>
